@@ -5,8 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product preview card component</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+
+  <title>Product preview card component</title>
+
+  <link rel="stylesheet" href="stylesheet.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -16,17 +24,36 @@
 </head>
 <body>
 
-  Perfume
+  <main class="card">
+    <div>
+      <picture>
+        <!-- Large screen (desktop) image -->
+        <source media="(min-width: 1024px)" srcset="./images/image-product-desktop.jpg" style="width: 100%;">
+                
+        <!-- Default image (mobile) -->
+        <img src="./images/image-product-mobile.jpg" alt="Product Image">
+      </picture>
+    </div>
+    <div class="content">
+      <p>Perfume</p>
 
-  Gabrielle Essence Eau De Parfum
+      <h3>Gabrielle Essence Eau De Parfum</h3>
+    
+      <p>A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+        Perfumer-Creator for the House of CHANEL.</p>
+    
+      <div>
+        $149.99
+        $169.99
+      </div>
+    
+      <div>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </main>
 
-  A floral, solar and voluptuous interpretation composed by Olivier Polge, 
-  Perfumer-Creator for the House of CHANEL.
 
-  $149.99
-  $169.99
-
-  Add to Cart
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
