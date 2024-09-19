@@ -6,7 +6,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
@@ -14,9 +13,6 @@ This is a solution to the [Product preview card component challenge on Frontend 
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -27,22 +23,10 @@ Users should be able to:
 - View the optimal layout depending on their device's screen size
 - See hover and focus states for interactive elements
 
-### Screenshot
-
-![](./screenshot.jpg)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it. 
-
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
-
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Github](https://github.com/yMeeraki/product-preview-card-component)
+- Live Site URL: [Netlify](https://previewproduct-fem.netlify.app)
 
 ## My process
 
@@ -51,61 +35,77 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
-- [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
-- [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working through this project. Writing these out and providing code samples of areas you want to highlight is a great way to reinforce your own knowledge.
+Throughout this project, I deepened my knowledge in responsive web design, semantic HTML, and Flexbox for layout management. Here are some specific areas I focused on:
 
-To see how you can add code snippets, see below:
+1. **Responsive Images with `<picture>` Element**: 
+   I used the `<picture>` element to serve different image sources depending on the user's screen size, ensuring that the appropriate image is loaded for mobile and desktop views. This not only improves loading speed but also enhances the overall user experience.
 
-```html
-<h1>Some HTML code I'm proud of</h1>
-```
+   ```html
+   <picture>
+     <source media="(min-width: 1024px)" srcset="./images/image-product-desktop.jpg">
+     <img src="./images/image-product-mobile.jpg" alt="Product Image">
+   </picture>
+   ```
+
+2. **CSS Flexbox for Layouts**:
+Flexbox was used to create a responsive card layout. By adjusting the flex-direction based on the screen size, I ensured that the card content adapts to both mobile and desktop displays.
+
+    ```css
+    .card {
+      display: flex;
+      flex-direction: column;
+      max-width: 20rem;
+    }
+
+    @media (min-width: 768px) {
+      .card {
+        flex-direction: row;
+        max-width: 40rem;
+      }
+    }
+    ```
+
+3. **Button Hover Effects**:
+I also added hover effects to enhance the user experience. The button changes color when hovered over, making it more interactive.
+
 ```css
-.proud-of-this-css {
-  color: papayawhip;
+.add-button:hover {
+  background-color: hsl(212, 21%, 14%);
 }
 ```
-```js
-const proudOfThisFunc = () => {
-  console.log('🎉')
-}
-```
-
-If you want more help with writing markdown, we'd recommend checking out [The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
+Moving forward, I plan to focus on the following areas for continued development:
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+1. **CSS Grid Layouts**:  
+   While I used Flexbox for this project, I aim to become more comfortable with CSS Grid for creating more complex, grid-based layouts. I want to explore how it complements Flexbox in responsive design.
+
+2. **Advanced Responsive Design**:  
+   I plan to dive deeper into media queries and learn more about using modern CSS features like `clamp()`, `minmax()`, and `aspect-ratio` to create fluid, adaptable layouts without hard breakpoints.
+
+3. **JavaScript Interactivity**:  
+   Although this project was mostly HTML and CSS, I want to incorporate more JavaScript in future projects to add dynamic features, such as form validation and interactive animations.
+
+4. **Performance Optimization**:  
+   Understanding how to optimize images, CSS, and scripts for faster load times, especially on mobile devices, is something I’ll continue working on. Techniques like lazy loading and code splitting are areas I'd like to explore further.
+
+By focusing on these areas, I aim to create more complex, efficient, and user-friendly projects in the future.
+
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [MDN Web Docs - Responsive Images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) - This article helped me understand how to properly use the `<picture>` element and `srcset` attribute for responsive images. It's a comprehensive guide that I'd recommend to anyone looking to improve their responsive image handling.
+- [CSS Tricks - A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - This guide was essential in helping me get a firm grasp on Flexbox for creating responsive layouts. I constantly referred back to it throughout the project and will continue to use it in the future.
+- [Google Fonts](https://fonts.google.com/) - This resource was useful for selecting the right typography for my project. I found it easy to integrate custom fonts using Google Fonts.
 
-**Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
+- Linkedin - [Yukti Gupta](https://www.linkedin.com/in/yukti-gupta-589974195/)
+- Frontend Mentor - [@yMeeraki](https://www.frontendmentor.io/profile/yMeeraki)
 
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
