@@ -8,8 +8,26 @@ body{
 
     background-color: hsl(30, 38%, 92%);
 
+    font-family: "Fraunces", system-ui;
+
+    
     
 }
+
+/*Styling image*/
+img{
+  
+  border-top-left-radius: 20px;
+  
+}
+
+@media (min-width: 768px) {
+  img{
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+}
+
 
 /*Styling Card*/
 .card{
@@ -19,15 +37,19 @@ body{
      
     background-color: hsl(0, 0%, 100%);
 
-    max-width: 30rem;
+    max-width: 20rem;
 
     border-radius: 20px;
+
+    justify-content: center;
+    align-items: center;
+    
 }
 
 @media (min-width: 768px) {
     .card {
       flex-direction: row; /* Side-by-side layout on larger screens */
-      padding: 0px 0px 0px 0px;
+      max-width: 40rem;
     }
 }
 
@@ -35,16 +57,69 @@ body{
 .content{
     display: flex;
     flex-direction: column;
-    justify-content: stretch;
-    align-items: flex-start;
-
+    
     gap: 1rem;
-    
-    
+
+    margin: 20px;
 }
 
+/*Styling of <p> tags*/
+p{
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: hsl(228, 12%, 48%);
+  font-size:  0.875rem;
+}
 
+/*Styling of heading*/
+.content h1{
+  color: hsl(212, 21%, 14%);
+}
 
+/*Styling of Price*/
+.price{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  
+ 
+}
+
+.price h1{
+  color: hsl(158, 36%, 37%);
+
+}
+
+.price p{
+  text-decoration: line-through;
+ 
+  
+}
+
+/*Styling of Button*/
+.add-button{
+  background-color: hsl(158, 36%, 37%);
+
+  display: flex;
+  gap:1rem;
+
+  padding: 10px;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+}
+
+.add-button p{
+  color: white;
+  font-weight: 700;
+}
+
+/*Hover button*/
+.add-button:hover{
+  background-color: hsl(212, 21%, 14%);
+}
 
 /*Reseting CSS*/
 /*
@@ -76,7 +151,7 @@ body{
   */
   img, picture, video, canvas, svg {
     display: block;
-    width: 100%;
+    max-width: 100%;
   }
   
   /*
